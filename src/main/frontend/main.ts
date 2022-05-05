@@ -1,4 +1,4 @@
 import { createApp } from 'vue'
-import Paragraph from './components/Paragraph.vue'
+import Counter from './components/Counter.vue'
 
-createApp(Paragraph).mount('.paragraph');
+createApp(Counter).mount('.counter');
