@@ -1,4 +1,9 @@
-import { createApp } from 'vue'
-import Counter from './components/Counter.vue'
+import {createApp} from 'vue'
+import MyApp from './components/MyApp.vue';
+import MyCounter from './components/MyCounter.vue'
 
-createApp(Counter).mount('.counter');
+const app = createApp(MyApp);
+app.mount('#my-app');
+
+const counter = createApp(MyCounter);
+counter.mount('.my-counter');
