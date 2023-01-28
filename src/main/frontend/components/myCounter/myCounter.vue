@@ -4,16 +4,11 @@
 </template>
 
 <script>
-import MyParagraph from "./MyParagraph.vue";
-
 export default {
   data() {
     return {
       count: 0
     }
-  },
-  components: {
-    'MyParagraph': MyParagraph
   },
   methods: {
     increment() {
