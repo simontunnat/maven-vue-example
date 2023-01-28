@@ -127,6 +127,9 @@
             <goals>
               <goal>npm</goal>
             </goals>
+            <configuration>
+              <arguments>install --no-fund --no-audit</arguments>
+            </configuration>
           </execution>
 
           <execution>
