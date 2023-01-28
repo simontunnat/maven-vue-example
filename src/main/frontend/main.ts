@@ -1,3 +1,3 @@
-import "./components/myApp/myApp.ts"
-import "./components/myCounter/myCounter.ts"
-import "./components/myParagraph/myParagraph.ts"
+import "./components/MyApp/MyApp.ts"
+import "./components/MyCounter/MyCounter.ts"
+import "./components/MyParagraph/MyParagraph.ts"
