@@ -3,23 +3,14 @@
   <button @click="increment" class="component-counter">Increment</button>
 </template>
 
-<script>
+<script setup>
 import MyParagraph from "../MyParagraph/MyParagraph.vue";
+import {ref} from 'vue'
 
-export default {
-  components: {
-    MyParagraph
-  },
-  data() {
-    return {
-      count: 0
-    }
-  },
-  methods: {
-    increment() {
-      this.count++
-    }
-  }
+const count = ref(0)
+
+function increment() {
+  count.value++;
 }
 </script>
 
