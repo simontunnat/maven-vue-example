@@ -1,6 +1,6 @@
 import {createApp} from 'vue'
 import MyCounter from './MyCounter.vue'
 
-// without web component Vue.js components have to be specifically initialized
+// Vue also allows to mount multiple / many apps on the same page
 const app = createApp(MyCounter);
 app.mount('.mount-counter');

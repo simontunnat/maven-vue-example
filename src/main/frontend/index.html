@@ -7,7 +7,12 @@
   <body>
     <div class="mount-app"></div>
     <div class="mount-counter"></div>
-    <!-- custom elements can be directly added to the DOM like any other HTML element -->
-    <my-paragraph text="Jet another paragraph (web component)"></my-paragraph>
+    <!-- Web components can be directly added to the DOM like any other HTML element -->
+    <my-paragraph-element text="Jet another paragraph (web component)"></my-paragraph-element>
+    <!-- If an app contains no template its innerHtml will be taken as its template -->
+    <div id="mount-container">
+      <my-counter></my-counter>
+      <my-paragraph text="Another paragraph still (taken from the innerHtml)"></my-paragraph>
+    </div>
   </body>
 </html>

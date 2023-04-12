@@ -1,6 +1,7 @@
 import {createApp} from 'vue'
 import MyApp from './MyApp.vue';
 
-// without web component Vue.js components have to be specifically initialized
+// This is kind of the default usage of Vue:
+// A "app" component using other components and being mounted into a <div> element
 const app = createApp(MyApp);
 app.mount('.mount-app');

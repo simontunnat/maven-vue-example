@@ -6,7 +6,8 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode=production"
+    "dev": "webpack --mode=development",
+    "prod": "webpack --mode=production"
   },
   "keywords": [],
   "author": "Simon Tunnat",
