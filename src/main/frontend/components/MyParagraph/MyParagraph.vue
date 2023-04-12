@@ -1,5 +1,5 @@
 <template>
-  <p>{{ text }}</p>
+  <p class="component-paragraph">{{ text }}</p>
 </template>
 
 <script>
@@ -9,3 +9,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.component-paragraph {
+  color: darkgreen;
+}
+</style>

@@ -1,5 +1,6 @@
 import {createApp} from 'vue'
 import MyCounter from './MyCounter.vue'
 
-const counter = createApp(MyCounter);
-counter.mount('.my-counter');
+// without web component Vue.js components have to be specifically initialized
+const app = createApp(MyCounter);
+app.mount('.mount-counter');

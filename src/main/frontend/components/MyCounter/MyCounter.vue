@@ -1,6 +1,6 @@
 <template>
   <MyParagraph v-bind:text="'Count: ' + count"></MyParagraph>
-  <button @click="increment">Increment</button>
+  <button @click="increment" class="component-counter">Increment</button>
 </template>
 
 <script>
@@ -22,3 +22,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.component-counter {
+  color: darkred;
+}
+</style>
