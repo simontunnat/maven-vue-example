@@ -1,6 +1,8 @@
 <template>
-  <MyParagraph v-bind:text="'Count: ' + count"></MyParagraph>
-  <button @click="increment" class="component-counter">Increment</button>
+  <div class="component-counter">
+    <MyParagraph v-bind:text="'Count: ' + count"></MyParagraph>
+    <button @click="increment">Increment</button>
+  </div>
 </template>
 
 <script setup>
@@ -15,7 +17,15 @@ function increment() {
 </script>
 
 <style lang="scss">
+/* CSS will not work if the component is mounted as a web component, because of the shadow dom :( */
 .component-counter {
   color: darkred;
+  border: 1px solid darkred;
+  padding: 1em;
+}
+
+.component-counter .component-paragraph {
+  color: darkmagenta;
+  border: 1px solid darkmagenta;
 }
 </style>

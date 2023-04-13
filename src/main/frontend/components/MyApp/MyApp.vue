@@ -1,8 +1,7 @@
 <template>
+  <MyParagraph text="A paragraph in the App"></MyParagraph>
   <MyCounter></MyCounter>
-  <!-- using components that are available as custom elements is simpler -->
-  <MyParagraph text="A paragraph"></MyParagraph>
-  <MyParagraph text="Another paragraph"></MyParagraph>
+  <MyParagraph text="Another paragraph in the App"></MyParagraph>
 </template>
 
 <script setup>

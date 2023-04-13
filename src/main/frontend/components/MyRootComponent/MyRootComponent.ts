@@ -7,4 +7,4 @@ import MyParagraph from "../MyParagraph/MyParagraph.vue";
 const app = createApp({});
 app.component('MyCounter', MyCounter);
 app.component('MyParagraph', MyParagraph);
-app.mount('#mount-container');
+app.mount("div[data-vue-app='MyRootComponent']");

@@ -5,14 +5,19 @@
     <title>Getting Started</title>
   </head>
   <body>
-    <div class="mount-app"></div>
-    <div class="mount-counter"></div>
-    <!-- Web components can be directly added to the DOM like any other HTML element -->
-    <my-paragraph-element text="Jet another paragraph (web component)"></my-paragraph-element>
-    <!-- If an app contains no template its innerHtml will be taken as its template -->
-    <div id="mount-container">
-      <my-paragraph text="Another paragraph still (taken from the innerHtml)"></my-paragraph>
+    <!-- Usually an app component will contain a template in its .vue file -->
+    <div data-vue-app="MyApp"></div>
+
+    <!-- If an app contains no template its innerHtml will be taken as its template instead -->
+    <div data-vue-app="MyRootComponent">
+      <my-paragraph text="A paragraph in the RootComponent"></my-paragraph>
       <my-counter></my-counter>
+      <my-paragraph text="Another paragraph in the RootComponent"></my-paragraph>
     </div>
+
+    <!-- Web components can be directly added to the DOM like any other HTML element -->
+    <my-paragraph-web-component text="A paragraph web component"></my-paragraph-web-component>
+    <my-counter-web-component></my-counter-web-component>
+    <my-paragraph-web-component text="Another paragraph web component"></my-paragraph-web-component>
   </body>
 </html>
