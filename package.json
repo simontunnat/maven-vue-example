@@ -5,9 +5,10 @@
   "repository": "https://github.com/simontunnat/maven-vue-example",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack --mode=development",
-    "prod": "webpack --mode=production"
+    "test-watch": "vitest watch",
+    "test-run": "vitest run",
+    "build-dev": "webpack --mode=development",
+    "build-prod": "webpack --mode=production"
   },
   "keywords": [],
   "author": "Simon Tunnat",
