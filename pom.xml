@@ -46,6 +46,8 @@
 
     <!-- other plugin versions -->
     <frontend-maven-plugin.version>1.12.1</frontend-maven-plugin.version>
+    <!-- spotless 2.30.0 is the last version to support Java 8 -->
+    <spotless-maven-plugin.version>2.30.0</spotless-maven-plugin.version>
 
     <!-- Node.js version -->
     <nodejs.version>v16.19.0</nodejs.version>
@@ -106,6 +108,12 @@
             <nodeVersion>${nodejs.version}</nodeVersion>
           </configuration>
         </plugin>
+
+        <plugin>
+          <groupId>com.diffplug.spotless</groupId>
+          <artifactId>spotless-maven-plugin</artifactId>
+          <version>${spotless-maven-plugin.version}</version>
+        </plugin>
       </plugins>
     </pluginManagement>
 
@@ -153,6 +161,28 @@
             </configuration>
           </execution>
         </executions>
+      </plugin>
+
+      <plugin>
+        <groupId>com.diffplug.spotless</groupId>
+        <artifactId>spotless-maven-plugin</artifactId>
+        <configuration>
+          <formats>
+            <!-- you can define as many formats as you want, each is independent -->
+            <format>
+              <includes>
+                <include>*.md</include>
+                <include>.gitignore</include>
+              </includes>
+              <trimTrailingWhitespace/>
+              <endWithNewline/>
+              <indent>
+                <tabs>true</tabs>
+                <spacesPerTab>4</spacesPerTab>
+              </indent>
+            </format>
+          </formats>
+        </configuration>
       </plugin>
     </plugins>
   </build>
