@@ -15,7 +15,7 @@ jobs:
     name: Build with JDK ${{ matrix.jdk }}
     strategy:
       matrix:
-        jdk: [8, 11, 17]
+        jdk: [11, 17]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2

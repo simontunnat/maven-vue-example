@@ -5,7 +5,7 @@
 This is an example for how to build Vue.js.
 
 ## Requirements
-* Java Version 8 or later (the project is build against JDK 8, 11 and 17)
+* Java Version 11 or later (the project is build against JDK 11 and 17)
 
 ## Usage
 Execute the following command:
