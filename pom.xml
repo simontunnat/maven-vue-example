@@ -7,7 +7,7 @@
   <groupId>org.tunnat.maven</groupId>
   <artifactId>vue-example</artifactId>
   <version>${revision}</version>
-  <packaging>pom</packaging>
+  <packaging>jar</packaging>
   <name>${project.groupId}:${project.artifactId}</name>
   <description>Maven Vue.js Example</description>
   <url>https://github.com/simontunnat/maven-vue-example</url>
@@ -47,6 +47,9 @@
     <!-- other plugin versions -->
     <frontend-maven-plugin.version>1.12.1</frontend-maven-plugin.version>
     <spotless-maven-plugin.version>2.36.0</spotless-maven-plugin.version>
+
+    <!--dependency versions -->
+    <spring-boot.version>2.7.11</spring-boot.version>
 
     <!-- Node.js version -->
     <nodejs.version>v16.19.0</nodejs.version>
@@ -109,6 +112,12 @@
         </plugin>
 
         <plugin>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-maven-plugin</artifactId>
+          <version>${spring-boot.version}</version>
+        </plugin>
+
+        <plugin>
           <groupId>com.diffplug.spotless</groupId>
           <artifactId>spotless-maven-plugin</artifactId>
           <version>${spotless-maven-plugin.version}</version>
@@ -163,6 +172,18 @@
       </plugin>
 
       <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <goals>
+              <goal>repackage</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+      <plugin>
         <groupId>com.diffplug.spotless</groupId>
         <artifactId>spotless-maven-plugin</artifactId>
         <configuration>
@@ -185,4 +206,24 @@
       </plugin>
     </plugins>
   </build>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <!-- Import dependency management from Spring Boot -->
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-dependencies</artifactId>
+        <version>${spring-boot.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+  </dependencies>
 </project>
