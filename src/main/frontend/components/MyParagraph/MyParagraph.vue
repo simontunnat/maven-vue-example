@@ -2,10 +2,10 @@
   <p class="component-paragraph">{{ text }}</p>
 </template>
 
-<script setup>
-defineProps({
-  'text': String
-})
+<script setup lang="ts">
+defineProps<{
+  text: string
+}>();
 </script>
 
 <style lang="scss">

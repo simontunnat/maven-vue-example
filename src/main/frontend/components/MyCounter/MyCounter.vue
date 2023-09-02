@@ -5,13 +5,13 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import MyParagraph from "../MyParagraph/MyParagraph.vue";
-import {ref} from 'vue'
+import {ref} from 'vue';
 
-const count = ref(0)
+const count = ref(0);
 
-function increment() {
+function increment(): void {
   count.value++;
 }
 </script>
