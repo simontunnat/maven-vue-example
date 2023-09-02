@@ -1,4 +1,4 @@
-import "./components/MyApp/MyApp.ts"
-import "./components/MyRootComponent/MyRootComponent.ts"
-import "./components/MyParagraphWebComponent/MyParagraphWebComponent.ts"
-import "./components/MyCounterWebComponent/MyCounterWebComponent.ts"
+import "./components/MyApp/MyApp"
+import "./components/MyRootComponent/MyRootComponent"
+import "./components/MyParagraphWebComponent/MyParagraphWebComponent"
+import "./components/MyCounterWebComponent/MyCounterWebComponent"
