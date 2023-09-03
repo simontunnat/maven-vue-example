@@ -28,6 +28,9 @@ const counter = ref<Counter>({count: 0});
 function increment(): void {
   counter.value.count++;
 }
+
+// This will not be reported by ESLint but will fail the ts compiler in production mode
+testCompilerIssue().count
 </script>
 
 <style lang="scss">
