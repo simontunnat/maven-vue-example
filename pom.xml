@@ -52,7 +52,7 @@
     <spring-boot.version>2.7.11</spring-boot.version>
 
     <!-- Node.js version -->
-    <nodejs.version>v16.19.0</nodejs.version>
+    <nodejs.version>v18.17.1</nodejs.version>
   </properties>
 
   <build>
