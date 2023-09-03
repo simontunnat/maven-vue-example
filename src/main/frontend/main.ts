@@ -1,4 +1,3 @@
-import "./components/MyApp/MyApp"
-import "./components/MyRootComponent/MyRootComponent"
-import "./components/MyParagraphWebComponent/MyParagraphWebComponent"
-import "./components/MyCounterWebComponent/MyCounterWebComponent"
+import "./vue/mount-sfc-app"
+import "./vue/define-custom-elements"
+import "./vue/mount-innerhtml-template-app"

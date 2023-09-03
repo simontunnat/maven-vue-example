@@ -1,6 +1,6 @@
 import {createApp} from 'vue'
-import MyCounter from "../MyCounter/MyCounter.vue";
-import MyParagraph from "../MyParagraph/MyParagraph.vue";
+import MyCounter from "../components/MyCounter/MyCounter.vue";
+import MyParagraph from "../components/MyParagraph/MyParagraph.vue";
 
 const containers = document.querySelectorAll("div[data-vue-app='MyRootComponent']");
 
