@@ -1,7 +1,8 @@
 const path = require('path');
+const ESLintPlugin = require('eslint-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const { VueLoaderPlugin } = require("vue-loader");
+const {VueLoaderPlugin} = require("vue-loader");
 const webpack = require("webpack");
 
 module.exports = {
@@ -32,6 +33,7 @@ module.exports = {
     ]
   },
   plugins: [
+    new ESLintPlugin({extensions: ['js', 'ts', 'vue']}),
     new HtmlWebpackPlugin({
       template: './src/main/frontend/index.html'
     }),

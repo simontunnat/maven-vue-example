@@ -1,7 +1,9 @@
 <template>
-  <MyParagraph text="A paragraph in the App"></MyParagraph>
-  <MyCounter></MyCounter>
-  <MyParagraph text="Another paragraph in the App"></MyParagraph>
+  <div>
+    <MyParagraph text="A paragraph in the App"></MyParagraph>
+    <MyCounter></MyCounter>
+    <MyParagraph text="Another paragraph in the App"></MyParagraph>
+  </div>
 </template>
 
 <script setup lang="ts">
