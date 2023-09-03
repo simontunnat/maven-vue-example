@@ -5,7 +5,6 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const {VueLoaderPlugin} = require("vue-loader");
 const webpack = require("webpack");
 
-/* eslint-env node */
 module.exports = {
   entry: {
     main: './src/main/frontend/main.ts'
