@@ -15,8 +15,5 @@ module.exports = {
     '@typescript-eslint',
     'vue'
   ],
-  rules: {
-    '@typescript-eslint/ban-types': 'warn'
-  },
   root: true
 }

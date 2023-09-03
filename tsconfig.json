@@ -27,8 +27,7 @@
 //    ]
   },
   "include": [
-    "src/main/frontend/**/*.ts",
-    "src/main/frontend/**/*.vue"
+    "src/main/frontend"
   ],
   "exclude": [
     "node_modules"
