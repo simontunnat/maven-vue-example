@@ -17,6 +17,7 @@
 import MyParagraph from "../MyParagraph/MyParagraph.vue";
 import {ref} from 'vue';
 import {Counter} from "./Counter";
+import {testCompilerIssue} from "./testCompilerIssue";
 
 defineProps<{
   text?: string
@@ -27,11 +28,6 @@ const counter = ref<Counter>({count: 0});
 function increment(): void {
   counter.value.count++;
 }
-
-function testCompilerIssue(): Counter | {} {
-  return {};
-}
-
 </script>
 
 <style lang="scss">
