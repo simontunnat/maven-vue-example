@@ -49,7 +49,7 @@
     <spotless-maven-plugin.version>2.39.0</spotless-maven-plugin.version>
 
     <!--dependency versions -->
-    <spring-boot.version>2.7.11</spring-boot.version>
+    <spring-boot.version>2.7.15</spring-boot.version>
 
     <!-- Node.js version -->
     <nodejs.version>v18.17.1</nodejs.version>
