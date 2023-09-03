@@ -19,6 +19,8 @@ module.exports = {
         test: /\.ts$/,
         loader: 'ts-loader',
         options: {
+          // setting transpileOnly to "true" fix solve the ts compiler issue being shown in production mode
+          // transpileOnly: true,
           appendTsSuffixTo: [/\.vue$/]
         }
       },

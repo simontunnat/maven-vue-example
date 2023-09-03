@@ -8,6 +8,8 @@
     <button @click="increment">
       Increment
     </button>
+    <!-- This will not be reported by ESLint but will fail the ts compiler in production mode -->
+    <MyParagraph :text="testCompilerIssue().count" />
   </div>
 </template>
 
@@ -25,6 +27,11 @@ const counter = ref<Counter>({count: 0});
 function increment(): void {
   counter.value.count++;
 }
+
+function testCompilerIssue(): Counter | {} {
+  return {};
+}
+
 </script>
 
 <style lang="scss">
