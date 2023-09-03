@@ -4,7 +4,7 @@
       v-if="text"
       :text="text"
     />
-    <MyParagraph :text="'Count: ' + count" />
+    <MyParagraph :text="'Count: ' + counter.count" />
     <button @click="increment">
       Increment
     </button>
@@ -14,15 +14,16 @@
 <script setup lang="ts">
 import MyParagraph from "../MyParagraph/MyParagraph.vue";
 import {ref} from 'vue';
+import {Counter} from "./Counter";
 
 defineProps<{
   text?: string
 }>();
 
-const count = ref(0);
+const counter = ref<Counter>({count: 0});
 
 function increment(): void {
-  count.value++;
+  counter.value.count++;
 }
 </script>
 
