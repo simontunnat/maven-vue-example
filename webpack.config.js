@@ -1,5 +1,6 @@
 const path = require('path');
 const ESLintPlugin = require('eslint-webpack-plugin');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const {VueLoaderPlugin} = require("vue-loader");
@@ -19,7 +20,7 @@ module.exports = {
         test: /\.ts$/,
         loader: 'ts-loader',
         options: {
-          // setting transpileOnly to "true" fix solve the ts compiler issue being shown in production mode
+          // setting transpileOnly to "true" prevents the Vue / ts compiler issue being shown in production mode
           // transpileOnly: true,
           appendTsSuffixTo: [/\.vue$/]
         }
@@ -36,6 +37,8 @@ module.exports = {
   },
   plugins: [
     new ESLintPlugin({extensions: ['js', 'ts', 'vue']}),
+    // enabling the ForkTsCheckerWebpackPlugin prevents the Vue / ts compiler issue being shown in production mode
+    // new ForkTsCheckerWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: './src/main/frontend/index.html'
     }),
