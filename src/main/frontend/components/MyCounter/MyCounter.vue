@@ -1,7 +1,9 @@
 <template>
   <div class="component-counter">
-    <MyParagraph v-bind:text="'Count: ' + count"></MyParagraph>
-    <button @click="increment">Increment</button>
+    <MyParagraph :text="'Count: ' + count" />
+    <button @click="increment">
+      Increment
+    </button>
   </div>
 </template>
 

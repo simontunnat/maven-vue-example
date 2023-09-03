@@ -1,8 +1,8 @@
 <template>
   <div>
-    <MyParagraph text="A paragraph in the App"></MyParagraph>
-    <MyCounter></MyCounter>
-    <MyParagraph text="Another paragraph in the App"></MyParagraph>
+    <MyParagraph text="A paragraph in the App" />
+    <MyCounter />
+    <MyParagraph text="Another paragraph in the App" />
   </div>
 </template>
 

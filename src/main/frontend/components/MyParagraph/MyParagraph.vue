@@ -1,5 +1,7 @@
 <template>
-  <p class="component-paragraph">{{ text }}</p>
+  <p class="component-paragraph">
+    {{ text }}
+  </p>
 </template>
 
 <script setup lang="ts">
