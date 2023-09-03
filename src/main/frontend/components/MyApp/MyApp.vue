@@ -1,7 +1,7 @@
 <template>
   <div>
     <MyParagraph text="A paragraph in the App" />
-    <MyCounter />
+    <MyCounter text="A counter in the App" />
     <MyParagraph text="Another paragraph in the App" />
   </div>
 </template>

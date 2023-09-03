@@ -1,5 +1,9 @@
 <template>
   <div class="component-counter">
+    <MyParagraph
+      v-if="text"
+      :text="text"
+    />
     <MyParagraph :text="'Count: ' + count" />
     <button @click="increment">
       Increment
@@ -10,6 +14,10 @@
 <script setup lang="ts">
 import MyParagraph from "../MyParagraph/MyParagraph.vue";
 import {ref} from 'vue';
+
+defineProps<{
+  text?: string
+}>();
 
 const count = ref(0);
 
