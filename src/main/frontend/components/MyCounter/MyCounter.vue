@@ -16,7 +16,7 @@
 <script setup lang="ts">
 import MyParagraph from "../MyParagraph/MyParagraph.vue";
 import {ref} from 'vue';
-import {Counter} from "./Counter";
+import type {Counter} from "./Counter";
 import {testCompilerIssue} from "./testCompilerIssue";
 
 defineProps<{

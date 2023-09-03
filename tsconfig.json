@@ -5,6 +5,7 @@
     "strict": true,
     "isolatedModules": true,
     "noImplicitReturns": true,
+    "verbatimModuleSyntax": true,
     "importHelpers": true,
     "moduleResolution": "node",
     "skipLibCheck": true,

@@ -1,4 +1,4 @@
-import {Counter} from "./Counter";
+import type {Counter} from "./Counter";
 
 export function testCompilerIssue(): Counter | object {
     return {};
