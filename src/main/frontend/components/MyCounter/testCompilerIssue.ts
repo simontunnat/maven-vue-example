@@ -5,4 +5,4 @@ export function testCompilerIssue(): Counter | {} {
 }
 
 // This will not be reported by ESLint but will fail the ts compiler in both dev and production mode
-testCompilerIssue().count
+// testCompilerIssue().count
