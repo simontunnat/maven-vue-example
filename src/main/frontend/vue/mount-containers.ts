@@ -2,7 +2,7 @@ import {createApp} from 'vue'
 import MyCounter from "../components/MyCounter/MyCounter.vue";
 import MyParagraph from "../components/MyParagraph/MyParagraph.vue";
 
-const containers = document.querySelectorAll("div[data-vue-app='MyRootComponent']");
+const containers = document.querySelectorAll("div[data-vue-app='MyContainer']");
 
 containers.forEach((container) => {
   // If an app contains no template its innerHtml will be taken as its template

@@ -12,17 +12,17 @@
     <div data-vue-app="MyApp"></div>
 
     <!-- If an app contains no template its innerHtml will be taken as its template instead -->
-    <div data-vue-app="MyRootComponent">
-      <my-paragraph text="A paragraph in the RootComponent"></my-paragraph>
+    <div data-vue-app="MyContainer">
+      <my-paragraph text="A paragraph in the container"></my-paragraph>
       <my-counter></my-counter>
-      <my-paragraph text="Another paragraph in the RootComponent"></my-paragraph>
+      <my-paragraph text="Another paragraph in the container"></my-paragraph>
     </div>
 
     <!-- We need to create a separate App instance for each element where an app should be mounted -->
-    <div data-vue-app="MyRootComponent">
-      <my-paragraph text="A paragraph in the 2. RootComponent"></my-paragraph>
+    <div data-vue-app="MyContainer">
+      <my-paragraph text="A paragraph in the 2. container"></my-paragraph>
       <my-counter></my-counter>
-      <my-paragraph text="Another paragraph in the 2. RootComponent"></my-paragraph>
+      <my-paragraph text="Another paragraph in the 2. container"></my-paragraph>
     </div>
 
     <!-- Web components can be directly added to the DOM like any other HTML element -->
