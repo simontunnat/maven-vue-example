@@ -6,7 +6,7 @@ export default defineConfig({
     vue()
   ],
   test: {
-    include: [ "./src/test/frontend/**/*.test.ts"],
+    include: [ "./src/test/frontend/**/*.test.js"],
     environment: "jsdom"
   }
 });
