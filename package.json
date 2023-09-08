@@ -5,10 +5,10 @@
   "repository": "https://github.com/simontunnat/maven-vue-example",
   "private": true,
   "scripts": {
-    "test": "vitest run --coverage --color",
-    "test-watch": "vitest watch --coverage --color",
     "build-dev": "vue-tsc --noEmit --pretty && webpack --color --mode=development",
-    "build-prod": "vue-tsc --noEmit --pretty && webpack --color --mode=production"
+    "build-prod": "vue-tsc --noEmit --pretty && webpack --color --mode=production",
+    "test": "vitest run --coverage --color",
+    "watch": "vitest watch --coverage --color"
   },
   "keywords": [],
   "author": "Simon Tunnat",

@@ -8,9 +8,34 @@ This is an example for how to build Vue.js.
 * Java Version 11 or later (the project is build against JDK 11 and 17)
 
 ## Usage
-Execute the following command:
+### Full build
 ```
 mvn clean verify
+```
+
+### Start Spring Boot locally
+```
+mvn clean spring-boot:run
+```
+
+### Build frontend (development)
+```
+npm run build-dev
+```
+
+### Build frontend (production)
+```
+npm run build-prod
+```
+
+### Run frontend tests
+```
+npm test
+```
+
+### Watch frontend tests for changes
+```
+npm run watch
 ```
 
 ## Legal
