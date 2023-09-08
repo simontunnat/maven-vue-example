@@ -7,8 +7,8 @@
   "scripts": {
     "test-watch": "vitest watch --coverage",
     "test-run": "vitest run --coverage",
-    "build-dev": "vue-tsc --noEmit && webpack --mode=development",
-    "build-prod": "vue-tsc --noEmit && webpack --mode=production"
+    "build-dev": "vue-tsc --noEmit --pretty && webpack --mode=development",
+    "build-prod": "vue-tsc --noEmit --pretty && webpack --mode=production"
   },
   "keywords": [],
   "author": "Simon Tunnat",
