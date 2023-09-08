@@ -8,8 +8,13 @@
     <button @click="increment">
       Increment
     </button>
-    <!-- This will not be reported by ESLint but will fail the ts compiler in production mode -->
-    <MyParagraph :text="testCompilerIssue().count" />
+    <!--
+    This will NOT be reported by ESLint
+    This will NOT be reported by the ts-loader in dev mode
+    This WILL be reported by the ts-loader in production mode
+    This WILL be reported by vue-tsc
+    {{ testCompilerIssue().count }}
+    -->
   </div>
 </template>
 
@@ -17,7 +22,7 @@
 import MyParagraph from "../MyParagraph/MyParagraph.vue";
 import {ref} from 'vue';
 import type {Counter} from "./Counter";
-import {testCompilerIssue} from "./testCompilerIssue";
+// import {testCompilerIssue} from "./testCompilerIssue";
 
 defineProps<{
   text?: string
@@ -29,8 +34,11 @@ function increment(): void {
   counter.value.count++;
 }
 
-// This will not be reported by ESLint but will fail the ts compiler in production mode
-testCompilerIssue().count
+// This will NOT be reported by ESLint
+// This will NOT be reported by the ts-loader in dev mode
+// This WILL be reported by the ts-loader in production mode
+// This WILL be reported by vue-tsc
+// testCompilerIssue().count
 </script>
 
 <style lang="scss">
