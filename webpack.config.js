@@ -20,8 +20,9 @@ module.exports = {
         test: /\.ts$/,
         loader: 'ts-loader',
         options: {
-          // setting transpileOnly to "true" prevents the Vue / ts compiler issue being shown in production mode
-          // transpileOnly: true,
+          // setting transpileOnly to "true" prevents the Vue / ts compiler issues being shown in production mode
+          // for checking the typescript code in the Vue components we now use vue-tsc
+          transpileOnly: true,
           appendTsSuffixTo: [/\.vue$/]
         }
       },
@@ -37,8 +38,9 @@ module.exports = {
   },
   plugins: [
     new ESLintPlugin({extensions: ['js', 'ts', 'vue']}),
-    // enabling the ForkTsCheckerWebpackPlugin prevents the Vue / ts compiler issue being shown in production mode
-    // new ForkTsCheckerWebpackPlugin(),
+    // enabling the ForkTsCheckerWebpackPlugin prevents the Vue / ts compiler issues being shown in production mode
+    // for checking the typescript code in the Vue components we now use vue-tsc
+    new ForkTsCheckerWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: './src/main/frontend/index.html'
     }),
