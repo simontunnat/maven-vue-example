@@ -70,6 +70,14 @@
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
           <version>${maven-clean-plugin.version}</version>
+          <configuration>
+            <filesets>
+              <!-- make sure the frontend build directory is cleaned -->
+              <fileset>
+                <directory>${basedir}/dist</directory>
+              </fileset>
+            </filesets>
+          </configuration>
         </plugin>
 
         <plugin>
@@ -166,6 +174,31 @@
             <phase>test</phase>
             <configuration>
               <arguments>run-script test</arguments>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+      <plugin>
+        <artifactId>maven-resources-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>copy-frontend-resources</id>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${basedir}/target/classes/static/frontend</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>${basedir}/dist</directory>
+                  <includes>
+                    <include>*.css</include>
+                    <include>*.js</include>
+                  </includes>
+                </resource>
+              </resources>
             </configuration>
           </execution>
         </executions>
