@@ -165,7 +165,7 @@
             </goals>
             <phase>test</phase>
             <configuration>
-              <arguments>run-script test-run</arguments>
+              <arguments>run-script test</arguments>
             </configuration>
           </execution>
         </executions>
