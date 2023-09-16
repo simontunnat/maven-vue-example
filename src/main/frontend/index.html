@@ -6,23 +6,57 @@
   </head>
   <body>
     <!-- Usually an app component will contain a template in its .vue file -->
-    <div data-vue-app="MyApp"></div>
+    <div data-vue-app></div>
 
     <!-- An app instance can be only mounted once -->
-    <div data-vue-app="MyApp"></div>
+    <div data-vue-app></div>
 
     <!-- If an app contains no template its innerHtml will be taken as its template instead -->
-    <div data-vue-app="MyContainer">
+    <div data-vue-container>
       <my-paragraph text="A paragraph in the 1. container"></my-paragraph>
       <my-counter text="A counter in the 1. container"></my-counter>
       <my-paragraph text="Another paragraph in the 1. container"></my-paragraph>
     </div>
 
     <!-- We need to create a separate App instance for each element where an app should be mounted -->
-    <div data-vue-app="MyContainer">
+    <div data-vue-container>
       <my-paragraph text="A paragraph in the 2. container"></my-paragraph>
       <my-counter text="A counter in the 2. container"></my-counter>
       <my-paragraph text="Another paragraph in the 2. container"></my-paragraph>
+    </div>
+
+    <div data-vue-container>
+      <template>
+        <my-paragraph text="A paragraph in the 3. container (taken from a template element)"></my-paragraph>
+        <my-counter text="A counter in the 3. container (taken from a template element)"></my-counter>
+        <my-paragraph text="Another paragraph in the 3. container (taken from a template element)"></my-paragraph>
+      </template>
+    </div>
+
+    <div data-vue-container>
+      <!-- The content of a <template> element needs to be valid HTML, so the following will NOT work -->
+      <template>
+        <MyParagraph text="A paragraph in the 4. container (taken from a template element)"></MyParagraph>
+        <MyCounter text="A counter in the 4. container (taken from a template element)"></MyCounter>
+        <MyParagraph text="Another paragraph in the 4. container (taken from a template element)"></MyParagraph>
+      </template>
+    </div>
+
+    <div data-vue-container>
+      <script type="text/x-template">
+        <my-paragraph text="A paragraph in the 5. container (taken from a script element)"></my-paragraph>
+        <my-counter text="A counter in the 5. container (taken from a script element)"></my-counter>
+        <my-paragraph text="Another paragraph in the 5. container (taken from a script element)"></my-paragraph>
+      </script>
+    </div>
+
+    <div data-vue-container>
+      <!-- The content of a <script> element DOE NOT need to be valid HTML, so the following WILL work -->
+      <script type="text/x-template">
+        <MyParagraph text="A paragraph in the 6. container (taken from a script element)"></MyParagraph>
+        <MyCounter text="A counter in the 6. container (taken from a script element)"></MyCounter>
+        <MyParagraph text="Another paragraph in the 6. container (taken from a script element)"></MyParagraph>
+      </script>
     </div>
 
     <!-- Web components can be directly added to the DOM like any other HTML element -->
