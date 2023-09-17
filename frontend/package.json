@@ -6,9 +6,9 @@
   "private": true,
   "scripts": {
     "build-dev": "vue-tsc --noEmit --pretty && webpack  build --color --mode=development",
-    "build-prod": "vue-tsc --noEmit --pretty && webpack builf --color --mode=production",
+    "build-prod": "vue-tsc --noEmit --pretty && webpack build --color --mode=production",
     "test": "vitest run --coverage --color",
-    "watch": "concurrently 'vue-tsc --noEmit --pretty --watch' 'webpack watch --color --mode=development' 'vitest watch --color'"
+    "watch": "concurrently --kill-others -p '{time}' -t 'HH:mm:ss.SSS' -c 'auto' 'vue-tsc --noEmit --pretty --watch' 'webpack watch --color --mode=development' 'vitest watch --color'"
   },
   "keywords": [],
   "author": "Simon Tunnat",

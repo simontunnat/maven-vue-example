@@ -8,5 +8,6 @@ export default defineConfig({
   test: {
     include: [ "./src/test/frontend/**/*.test.js"],
     environment: "jsdom"
-  }
+  },
+  clearScreen: false
 });

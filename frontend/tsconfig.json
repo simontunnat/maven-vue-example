@@ -12,7 +12,8 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
-    "types": []
+    "types": [],
+    "preserveWatchOutput": true
   },
   "baseUrl": "..",
   "include": [
