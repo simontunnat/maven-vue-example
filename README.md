@@ -37,16 +37,10 @@ cd frontend
 npm test
 ```
 
-### Watch frontend code for changes
+### Watch code for changes and re-run build and tests automatically
 ```
 cd frontend
 npm run watch
-```
-
-### Watch frontend tests for changes
-```
-cd frontend
-npm run watch-test
 ```
 
 ## Legal
