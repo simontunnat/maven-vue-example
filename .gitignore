@@ -1,7 +1,4 @@
-/target
-/node
-/node_modules
-/dist
-/coverage
-/.idea
-/*.iml
+target
+
+.idea
+*.iml
