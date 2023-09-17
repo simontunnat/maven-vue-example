@@ -15,27 +15,38 @@ mvn clean verify
 
 ### Start Spring Boot locally
 ```
+cd backend
 mvn clean spring-boot:run
 ```
 
 ### Build frontend (development)
 ```
+cd frontend
 npm run build-dev
 ```
 
 ### Build frontend (production)
 ```
+cd frontend
 npm run build-prod
 ```
 
 ### Run frontend tests
 ```
+cd frontend
 npm test
+```
+
+### Watch frontend code for changes
+```
+cd frontend
+npm run watch
 ```
 
 ### Watch frontend tests for changes
 ```
-npm run watch
+cd frontend
+npm run watch-test
 ```
 
 ## Legal

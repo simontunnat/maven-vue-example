@@ -5,10 +5,11 @@
   "repository": "https://github.com/simontunnat/maven-vue-example",
   "private": true,
   "scripts": {
-    "build-dev": "vue-tsc --noEmit --pretty && webpack --color --mode=development",
-    "build-prod": "vue-tsc --noEmit --pretty && webpack --color --mode=production",
+    "build-dev": "vue-tsc --noEmit --pretty && webpack  build --color --mode=development",
+    "build-prod": "vue-tsc --noEmit --pretty && webpack builf --color --mode=production",
     "test": "vitest run --coverage --color",
-    "watch": "vitest watch --coverage --color"
+    "watch-build": "webpack watch --color --mode=development",
+    "watch-test": "vitest watch --color"
   },
   "keywords": [],
   "author": "Simon Tunnat",
