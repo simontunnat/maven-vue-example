@@ -4,6 +4,7 @@ const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const {VueLoaderPlugin} = require("vue-loader");
+const FileManagerPlugin = require('filemanager-webpack-plugin');
 const webpack = require("webpack");
 
 module.exports = {
@@ -50,7 +51,17 @@ module.exports = {
       __VUE_OPTIONS_API__: false,
       __VUE_PROD_DEVTOOLS__: false
     }),
-    new VueLoaderPlugin()
+    new VueLoaderPlugin(),
+    new FileManagerPlugin({
+      events: {
+        onEnd: {
+          copy: [
+            // copy packaged frontend css / js into the backend after every webpack build
+            { source: 'dist/*.{css,js}', destination: '../backend/target/classes/static/frontend' }
+          ]
+        }
+      }
+    })
   ],
   output: {
     filename: '[name].js',

@@ -27,6 +27,7 @@
             <configuration>
               <outputDirectory>${basedir}/target/classes/static/frontend</outputDirectory>
               <resources>
+                <!-- copy packaged frontend css / js into the backend before starting the backend build -->
                 <resource>
                   <directory>${basedir}/../frontend/dist</directory>
                   <includes>
