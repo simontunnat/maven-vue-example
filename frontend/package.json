@@ -5,10 +5,10 @@
   "repository": "https://github.com/simontunnat/maven-vue-example",
   "private": true,
   "scripts": {
-    "build-dev": "vue-tsc --noEmit --pretty && webpack  build --color --mode=development",
-    "build-prod": "vue-tsc --noEmit --pretty && webpack build --color --mode=production",
+    "build-dev": "vue-tsc --noEmit --pretty && webpack  build --color --mode=development && vue-docgen-web-types",
+    "build-prod": "vue-tsc --noEmit --pretty && webpack build --color --mode=production && vue-docgen-web-types",
     "test": "vitest run --coverage --color",
-    "watch": "concurrently --kill-others -p '{time}' -t 'HH:mm:ss.SSS' -c 'auto' 'vue-tsc --noEmit --pretty --watch' 'webpack watch --color --mode=development' 'vitest watch --color'"
+    "watch": "concurrently --kill-others -p '{time}' -t 'HH:mm:ss.SSS' -c 'auto' 'vue-tsc --noEmit --pretty --watch' 'webpack watch --color --mode=development' 'vitest watch --color' 'vue-docgen-web-types --watch'"
   },
   "keywords": [],
   "author": "Simon Tunnat",
@@ -31,11 +31,13 @@
     "html-webpack-plugin": "5.5.0",
     "jsdom": "21.1.1",
     "mini-css-extract-plugin": "2.7.5",
+    "minimist": "^1.2.8",
     "sass": "1.62.0",
     "sass-loader": "13.2.2",
     "ts-loader": "9.4.4",
     "typescript": "5.2.2",
     "vitest": "0.34.3",
+    "vue-docgen-web-types": "^0.1.8",
     "vue-loader": "17.2.2",
     "vue-template-compiler": "2.7.14",
     "vue-tsc": "^1.8.10",

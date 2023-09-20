@@ -1,0 +1,14 @@
+{
+  "name": "maven-vue-example-backend",
+  "version": "1.0.0-SNAPSHOT",
+  "description": "Maven Vue.js Example Backend",
+  "repository": "https://github.com/simontunnat/maven-vue-example",
+  "private": true,
+  "keywords": [],
+  "author": "Simon Tunnat",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "vue": "3.3.4"
+  },
+  "web-types": "../frontend/web-types.json"
+}

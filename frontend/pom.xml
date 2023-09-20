@@ -25,6 +25,12 @@
               <fileset>
                 <directory>${basedir}/dist</directory>
               </fileset>
+              <fileset>
+                <directory>${basedir}</directory>
+                <includes>
+                  <include>web-types.json</include>
+                </includes>
+              </fileset>
             </filesets>
           </configuration>
         </plugin>
