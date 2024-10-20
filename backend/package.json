@@ -8,7 +8,7 @@
   "author": "Simon Tunnat",
   "license": "Apache-2.0",
   "devDependencies": {
-    "vue": "3.3.4"
+    "vue": "3.5.12"
   },
   "web-types": "../frontend/web-types.json"
 }
